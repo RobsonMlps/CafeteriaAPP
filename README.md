@@ -10,7 +10,19 @@ Aplicação web simples para apresentação de produtos de uma cafeteria, utiliz
 
 ## Estrutura do Projeto
 
-cafeteriaApp/ │ ├── assets/ │ └── imagem/ │ └── (imagens dos produtos e do carrossel) ├── src/ │ ├── index.js # Código JavaScript para renderizar os cartões │ └── index.css # Estilos customizados ├── index.html # Página principal ├── package.json # Dependências (Bootstrap) └── README.md # Este arquivo
+```
+cafeteriaApp/
+│
+├── assets/
+│   └── imagem/
+│       └── (imagens dos produtos e do carrossel)
+├── src/
+│   ├── index.js      # Código JavaScript para renderizar os cartões
+│   └── index.css     # Estilos customizados
+├── index.html        # Página principal
+├── package.json      # Dependências (Bootstrap)
+└── README.md         #
+```
 
 ## Como Executar
 
