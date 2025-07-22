@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafeteria</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/index.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/imagem/th.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Cafeteria
+                </a>
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="cardapio.html">Cardápio</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <!-- Barra de pesquisa -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-sm-10">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputText1" class="form-label">Busca</label>
+                            <input type="text" class="form-control" id="exampleInputText1"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2 d-flex align-items-end">
+                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        +
+                    </button>
+                </div>
+            </div>
+            <!-- Tabela de exemplo -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Discrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">2</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadratra item</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    <h5>CafeteriaApp</h5>
+                    <p class="mb-0">Seu café, do seu jeito. Sabor e tradição todos os dias.</p>
+                </div>
+            <div class="col-md-6 text-md-end">
+                <small>
+                    <p>2025 cafeteriaapp. Desenvolvido por Robson.<br /></p>
+                    <a class="nav-link " href="index.html">Home</a>
+                    <a class="nav-link " href="cardapio.html">Cardápio</a>
+                </small>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

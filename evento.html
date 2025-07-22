@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script>
+        function handleClickmensagem(event){
+            console.log("Cadastrado! ")
+        }
+
+        const handleMouseClick = (event) => {
+            let mensagem = document.getElementById("msg");
+            mensagem.style.background = "red";
+        }
+
+        function handelkeydown(event){
+            console.log("Olá Robson")
+        }
+    </script>
+</head>
+<body>
+    <button type="button" class="btn btn-primary" onclick="handleClickmensagem()" onmouseover="handleMouseClick()">Cadastro</button>
+    <p id="msg">Bem-vindo ao sistema de cadastro da cafeteria!</p>
+    <button type="button" class="btn btn-primary" onkeydown="handelkeydown()">teste</button>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
