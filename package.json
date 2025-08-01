@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.7"
+    "bootstrap": "^5.3.7",
+    "toastify-js": "^1.12.0"
   }
 }

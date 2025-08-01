@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafeteria</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="node_modules/toastify-js/src/toastify.css">
 </head>
 <body>
+    
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
@@ -21,9 +23,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
+                        <div class="navbar-nav" style="text-align: left;">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            <a class="nav-link" href="cardapio.html">Cardápio</a>
+                            <a class="nav-link active" href="cardapio.html">Cardápio</a>
                         </div>
                     </div>
                 </div>
@@ -32,8 +34,8 @@
             
         </nav>
     </header>
+
     <main>
-        <!-- Barra de pesquisa -->
         <div class="container mt-4">
             <div class="row">
                 <div class="col-sm-10">
@@ -44,13 +46,12 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-2 d-flex align-items-end">
-                    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="col-sm-2 d-flex align-items-end justify-content-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         +
                     </button>
                 </div>
             </div>
-            <!-- Tabela de exemplo -->
             <div class="row mt-4">
                 <div class="col-12">
                     <table class="table table-bordered">
@@ -59,46 +60,50 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Item</th>
                                 <th scope="col">Preço</th>
-                                <th scope="col">Discrição</th>
+                                <th scope="col">Descrição</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row">1</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">2</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">3</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <tbody id="dados">
+                        
                         </tbody>
                     </table>
                 </div>
             </div>
-
+        <div class="row mb-3">
+            <div class="col-12 text-end">
+                <button type="button" class="btn btn-danger" id="limparLocalStorageBtn">
+                    Limpar tabela 
+                </button>
+            </div>
+        </div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadratra item</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar item</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body"></div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
-                        </div>
+                        <form id="ItemCadastrarForm">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="item" class="form-label">Item</label>
+                                    <input type="text" class="form-control" id="item" name="item" placeholder="Item">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="preco" class="form-label">Preço</label>
+                                    <input type="text" class="form-control" id="preco" name="preco" placeholder="Preço">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descricao" class="form-label">Descrição</label>
+                                    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -111,16 +116,18 @@
                     <h5>CafeteriaApp</h5>
                     <p class="mb-0">Seu café, do seu jeito. Sabor e tradição todos os dias.</p>
                 </div>
-            <div class="col-md-6 text-md-end">
-                <small>
-                    <p>2025 cafeteriaapp. Desenvolvido por Robson.<br /></p>
-                    <a class="nav-link " href="index.html">Home</a>
-                    <a class="nav-link " href="cardapio.html">Cardápio</a>
-                </small>
-            </div>
+                <div class="col-md-6 text-md-end">
+                    <small>
+                        &copy; 2025 cafeteriaapp. Desenvolvido por Robson.<br />
+                        <a class="nav-link " href="index.html">Home</a>
+                        <a class="nav-link " href="cardapio.html">Cardápio</a>
+                    </small>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="src/cardapio.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/toastify-js/src/toastify.js"></script>
 </body>
 </html>
